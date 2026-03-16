@@ -1,0 +1,79 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Test Website</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 20px;
+              background-color: #f4f4f4;
+          }
+          header {
+              background-color: #333;
+              color: white;
+              padding: 10px 0;
+              text-align: center;
+          }
+          main {
+              background-color: white;
+              padding: 20px;
+              margin-top: 10px;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          }
+          footer {
+              margin-top: 30px;
+              text-align: center;
+              font-size: 0.9em;
+              color: #666;
+          }
+          button {
+              padding: 10px 20px;
+              font-size: 16px;
+              margin-top: 15px;
+              cursor: pointer;
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <h1>Test Website</h1>
+          <p>Simple HTML template for testing</p>
+      </header>
+
+      <main>
+          <h2>Welcome!</h2>
+          <p>This is a basic website template for testing purposes. You can modify the content, styles, and functionality as needed.</p>
+
+          <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+          <form onsubmit="handleFormSubmit(event)">
+              <label for="testInput">Enter something:</label>
+              <input type="text" id="testInput" required>
+              <button type="submit">Submit</button>
+          </form>
+      </main>
+
+      <footer>
+          <p>&copy; 2026 Test Website</p>
+      </footer>
+
+      <script>
+          function changeBackgroundColor() {
+              const colors = ['#ffcccc', '#cceeff', '#ccffcc', '#ffffcc', '#ffccff'];
+              const randomColor = colors[Math.floor(Math.random() * colors.length)];
+              document.body.style.backgroundColor = randomColor;
+          }
+
+          function handleFormSubmit(event) {
+              event.preventDefault();
+              alert('Form submitted successfully!');
+              // You can add form processing logic here
+          }
+      </script>
+  </body>
+  </html>
+
