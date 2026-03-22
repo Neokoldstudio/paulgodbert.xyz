@@ -29,6 +29,11 @@ jobs:
           tar -xzf zola-*.tar.gz
           sudo mv zola /usr/local/bin
 
+      # Debug file structure
+      - name: Debug structure
+        run: |
+          echo "==== FILE TREE ===="
+          find .
       # Build the site
       - name: Build site
         run: zola build
