@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Allow: /
-Sitemap: https://www.paulgodbert.xyz/sitemap.xml
