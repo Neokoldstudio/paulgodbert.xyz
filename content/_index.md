@@ -3,6 +3,12 @@ insert_anchor_links = "left"
 title = "Home"
 
 [extra]
-trigger = "This page contains blackjack and hookers, and bad jokes such as this one."
-disclaimer = "This page is under construction, none of the content present here is final."
+name = "Paul Godbert"
+job = "Research Intern"
+about = "I am a research intern at Ubisoft laForge, and member of the LIGUM Lab at UdeM"
+
+socials = [
+	{ url = "https://github.com/Neokoldstudio", name = "GitHub", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGitHub%3C/title%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E" },
+    { url = "https://www.linkedin.com/in/paul-godbert", name = "LinkedIn", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3ELinkedIn%3C/title%3E%3Cpath d='M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.413v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.268 2.371 4.268 5.455v6.288zM5.337 7.433a2.062 2.062 0 1 1 .001-4.123 2.062 2.062 0 0 1-.001 4.123zM6.814 20.452H3V9h3v11.452zM22.225 0H1.771C.792 0 .01.774 .01 1.729v20c0 .955 .782 1.729 1.761 1.729h20c .979 0 1.771-.774 1.771-1.729v-20C23.996 .774 23.204 0 22.225 0z'/%3E%3C/svg%3E" },
+]
 +++

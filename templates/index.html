@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block custom %}
+<link rel="stylesheet" href="{{ get_url(path='home.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='_footer.css') }}">
+
+<div class="home-container">
+    <!-- Colonne gauche -->
+    <div class="home-left">
+        <img src="/images/profile.png" alt="Photo de profil" class="profile-pic">
+
+        <h1 class="Title">{{ section.extra.name }}</h1>
+        <p class="job-title">{{ section.extra.job }}</p>
+
+
+        {% if section.extra.socials %}
+        <ul id="socials">
+            {% for link in section.extra.socials %}
+            <li>
+                <a href="{{ link.url | safe }}" title="{{ link.name }}">
+                    <i class="icon"
+                    style='--icon: url("data:image/svg+xml,{{ link.icon}}")'></i>
+                    <span>{{ link.name }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+    <!-- Colonne droite -->
+    <div class="home-right">
+        <h2 class="Title">About me</h2>
+        <p>{{ section.extra.about }}</p>
+    </div>
+</div>
+{% endblock custom %}
