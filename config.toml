@@ -48,13 +48,16 @@ show_repo = true
 # i.e. "@/blog/_index.md".
 # See https://www.getzola.org/documentation/content/linking/#internal-links
 links = [
-	#{ name = "Links", menu = [
-	#	{ url = "@/blog/_index.md", name = "Blog" },
-	#	{ url = "@/portfolio/_index.md", name = "Portfolio" },
-	#	{ url = "@/resume/_index.md", name = "Resume" }
-	#] },
-    { url = "https://github.com/Neokoldstudio", name = "GitHub"},
-    { url = "https://www.linkedin.com/in/paul-godbert", name = "LinkedIn"},
+    #{ url = "@/resume/_index.md", name = "Resume" }
+    {name = "Resume", menu = [
+        { url = "/CV_FR.pdf", name = "FR" },
+        { url = "/CV_EN.pdf", name = "EN" }
+    ]}
+	# { name = "Links", menu = [
+	# 	{ url = "@/resume/_index.md", name = "Resume" }
+	# 	# { url = "@/portfolio/_index.md", name = "Portfolio" },
+	# 	# { url = "@/resume/_index.md", name = "Resume" }
+	# ] }
 ]
 
 [extra.footer]

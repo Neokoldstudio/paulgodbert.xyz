@@ -1,0 +1,155 @@
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Merriweather", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+.resume {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header */
+.resume-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+}
+
+.role {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.contact {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.contact a {
+  margin: 0 0.5rem;
+}
+
+/* Grid layout */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+/* Sections */
+.right h2 {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  margin-bottom: 0.2rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+/* Left column tweaks */
+.left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Right column */
+.left .cv-aside{
+    min-width: auto;
+    p {
+    margin-bottom: 0.5rem;
+    }
+    h2 {
+        font-family: var(--font-sans);
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        font-size: 1rem;
+        color: var(--fg-muted-5);
+        background: var(--fg-muted-1);
+        padding: 0.3rem 0.6rem;
+        border-radius: 999px;
+
+        transition: var(--transition);
+
+        &:hover {
+            background-color: var(--fg-muted-2);
+            color: var(--fg-muted-6);
+            transform: scale(1.03);
+        }
+    }
+}
+.cv-section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 1rem;
+
+  display: flex;
+  align-items:center;
+  gap: 1rem;
+}
+
+.cv-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  position: relative;
+}
+
+.resume-grid::before {
+  content: "";
+  position: absolute;
+  left: 33%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #eee;
+}

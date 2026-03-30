@@ -4,7 +4,7 @@ title = "Home"
 
 [extra]
 name = "Paul Godbert"
-job = "Graphics Programmer"
+job = "Research Intern"
 company="Ubisoft LaForge, Montréal"
 
 interests = [

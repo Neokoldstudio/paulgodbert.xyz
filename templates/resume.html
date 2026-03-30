@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block custom %}
+<link rel="stylesheet" href="{{ get_url(path='resume.css') }}">
+
+<main class="resume">
+
+  <!-- HEADER -->
+  <header class="resume-header">
+    <h1>{{ section.title }}</h1>
+    {% if section.extra.subtitle %}
+      <p class="role">{{ section.extra.subtitle }}</p>
+    {% endif %}
+
+    <div class="contact">
+      {% if section.extra.email %}<span>{{ section.extra.email }}</span></br>{% endif %}
+      {% if section.extra.phone %}<span>{{ section.extra.phone }}</span></br>{% endif %}
+      {% if section.extra.location %}<span>{{ section.extra.location }}</span></br>{% endif %}
+      {% if section.extra.links %}
+        {% for link in section.extra.links %}
+          <a href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- BODY GRID -->
+  <div class="resume-grid">
+
+    <!-- LEFT COLUMN -->
+    <aside class="left">
+
+    <section class="cv-aside">
+        <h2>Skills</h2>
+        <ul>
+        {% for skill in section.extra.skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    <section class="cv-aside">
+        <h2>Languages</h2>
+        <ul>
+        {% for lang in section.extra.languages %}
+            <li>{{ lang }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <section class="right">
+      {{ section.content | safe }}
+    </section>
+
+  </div>
+
+</main>
+{% endblock custom %}
