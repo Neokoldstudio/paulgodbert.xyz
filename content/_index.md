@@ -5,7 +5,7 @@ title = "Home"
 [extra]
 name = "Paul Godbert"
 job = "Graphics Programmer"
-company="Ubisoft LaForge, MTL 🇨🇦"
+company="Ubisoft LaForge, Montréal"
 
 interests = [
   "Real-time rendering ☀️",

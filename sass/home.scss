@@ -4,13 +4,18 @@
   --font-mono: "JetBrains Mono", monospace;
 }
 
+#main-content {
+  max-width: none !important;
+  width: auto;
+}
+
 .home-container {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: clamp(3rem, 6vw, 10rem);
   padding: 3rem;
-  max-width: 1400px;  // ⬅️ key fix (increase as needed)
+  max-width: none;
   width: 100%;
   margin: 0 auto;
 
@@ -48,8 +53,7 @@
 
   .home-right {
     flex: 2.2;
-    min-width: 0; // ✅ CRITICAL FIX
-
+    max-width: 800px;
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1.5rem;
@@ -61,14 +65,13 @@
     }
 
     p {
+      width: 100%;
       font-size: 1.15rem;
       line-height: 1.6;
       margin: 0;
     }
 
     .interests {
-      // ❌ removed min-width: 400px
-
       h2 {
         font-family: var(--font-sans);
         font-weight: bold;
@@ -101,20 +104,19 @@
         }
       }
     }
-  }
-}
+    a {
+        text-decoration: none;
+        color: var(--accent-color);
+        padding: 0.1rem 0.3rem;
+        border-radius: 999px;
 
-.home-right a {
-  text-decoration: none;
-  color: var(--accent-color);
-  padding: 0.1rem 0.3rem;
-  border-radius: 999px;
+        transition: all 0.2s ease;
 
-  transition: all 0.2s ease;
-
-  &:hover {
-    background-color: var(--accent-color-alpha);
-    box-shadow: var(--edge-highlight);
+        &:hover {
+            background-color: var(--accent-color-alpha);
+            box-shadow: var(--edge-highlight);
+        }
+    }
   }
 }
 
