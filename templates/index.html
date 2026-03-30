@@ -11,6 +11,9 @@
 
         <h1 class="Title">{{ section.extra.name }}</h1>
         <p class="job-title">{{ section.extra.job }}</p>
+        {% if section.extra.company %}
+        <p class="company">{{ section.extra.company }}</p>
+        {% endif %}
 
 
         {% if section.extra.socials %}
@@ -30,8 +33,23 @@
 
     <!-- Colonne droite -->
     <div class="home-right">
-        <h2 class="Title">About me</h2>
-        <p>{{ section.extra.about }}</p>
+        <h2 class="about">About me</h2>
+        <p>I am a currently a Research Intern at <a href="https://www.ubisoft.com/en-us/studio/laforge">Ubisoft LaForge</a>, Montreal,
+         where I work on real-time simulation technologies for games as a member of the World Building And Environnement Team.<br/> 
+         <br/>I am currently wrapping-up my Master's in computer graphics at
+         UdeM, Under the supervision of <a href="https://www.iro.umontreal.ca/~poulin/">Prof. Pierre Poulin</a>.<br/>
+         <br/>I have been creating games from a young age and plan on continuing forever.</p>
+
+         {% if section.extra.interests %}
+            <div class="interests">
+                <h2>Interests</h2>
+                <ul>
+                    {% for interest in section.extra.interests %}
+                    <li>{{ interest }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock custom %}
