@@ -26,7 +26,7 @@ tags = ["Offline Rendering", "Path-Tracing", "Rust"]
 image = "/images/portfolio/submerge.gif"
 title = "Submerge Protocol 🟢"
 description = "A Fast-Paced Shooter prototype developped for the Brackeys Game Jam 2025"
-url = "https://github.com/example/another"
+url = ""
 tags = ["Unity", "Stylized rendering", "C#", "Game Jam", "3C", "Tooling"]
 
 [[extra.projects]]
