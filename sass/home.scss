@@ -94,12 +94,14 @@
         background: var(--fg-muted-1);
         padding: 0.3rem 0.6rem;
         border-radius: 999px;
+        box-shadow: var(--edge-highlight);
 
         transition: var(--transition);
 
         &:hover {
           background-color: var(--fg-muted-2);
           color: var(--fg-muted-6);
+          box-shadow: var(--edge-highlight);
           transform: scale(1.03);
         }
       }

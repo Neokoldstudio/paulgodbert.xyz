@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block custom %}
+<link rel="stylesheet" href="{{ get_url(path='portfolio.css') }}">
+
+<div class="portfolio-container">
+    <h1 class="portfolio-title">{{ section.title }}</h1>
+    <h2 class="portfolio-description">{{ section.description }}</h2>
+
+    <div class="portfolio-grid">
+        {% for project in section.extra.projects %}
+        <article class="project-card">
+            <a href="{{ project.url }}" class="project-image-link" title="{{ project.title }}">
+                <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+            </a>
+            <div class="project-info">
+                <h2 class="project-title">{{ project.title }}</h2>
+                <p class="project-description">{{ project.description }}</p>
+                {% if project.tags %}
+                <ul class="project-tags">
+                    {% for tag in project.tags %}
+                    <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+{% endblock custom %}
