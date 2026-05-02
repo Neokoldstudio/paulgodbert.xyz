@@ -4,7 +4,7 @@ template = "portfolio.html"
 description = "A non-exhaustive list of projects I have been appart of 🛠️"
 
 [[extra.projects]]
-image = "https://i.ytimg.com/vi/yiQGPdk1y1U/maxresdefault.jpg#spoiler"
+image = "https://i.ytimg.com/vi/yiQGPdk1y1U/maxresdefault.jpg"
 title = "Shallow Water Simulator 🌊"
 description = """--TBD--
 1 Year Research Internship at Ubisoft LaForge
