@@ -18,9 +18,10 @@ theme = "catppuccin-mocha"
 
 [extra]
 # Put all your custom variables here
-accent_color = "#4bc0ba"
+accent_color = "#58b9b5"
 accent_color_dark = "#4bc0ba"
-accent_color_light = "#00726c"
+accent_color_light = "#58b9b5"
+
 favicon = ""
 csp = [
 	{ directive = "font-src", domains = ["'self'"] },
@@ -41,6 +42,7 @@ csp = [
 show_feed = false
 # Whether to show the manual theme switcher in the nav
 show_theme_switcher = true
+default_theme = "dark"
 # Whether to show the link to the source repository in the nav
 show_repo = true
 # Links used in the nav.
