@@ -19,7 +19,7 @@ title = "Path Tracing Portals 🔆"
 description = """Winner of the 2025 ETS MTL Rendering Competition
 Full PBR Support, MIS, Heterogeneous Smoke, and of course ... PORTALS !
 """
-url = ""
+url = "https://profs.etsmtl.ca/agruson/competition/2024/"
 tags = ["Offline Rendering", "Path-Tracing", "Rust"]
 
 [[extra.projects]]
