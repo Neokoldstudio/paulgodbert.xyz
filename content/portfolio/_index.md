@@ -38,4 +38,11 @@ A Stylized Bullet Hell Made for the GMTK Game Jam 2025
 """
 url = "https://johnlivingston.itch.io/hardball"
 tags = ["Unity", "Stylized rendering", "C#", "Game Jam", "3C", "Tooling"]
+
+[[extra.projects]]
+image = "/images/portfolio/keyart_DC.png"
+title = "Dream Catchers ☁️"
+description = "Coop 3D platformer made for Ubisoft GameLab 2023 - Theme : Dream"
+url = ""
+tags = ["Unity", "Stylized rendering", "C#", "Game Jam", "3C", "Tooling"]
 +++
