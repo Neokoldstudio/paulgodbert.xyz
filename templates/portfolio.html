@@ -10,9 +10,33 @@
     <div class="portfolio-grid">
         {% for project in section.extra.projects %}
         <article class="project-card">
-            <a href="{{ project.url }}" class="project-image-link" title="{{ project.title }}">
-                <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
-            </a>
+
+            {% if project.image is string %}
+                <a href="{{ project.url }}" class="project-image-link" title="{{ project.title }}">
+                    <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+                </a>
+            {% else %}
+                <div class="project-carousel" data-autoplay="{{ project.carousel_interval | default(value=0) }}">
+                    <div class="carousel-track">
+                        {% for img in project.image %}
+                        <a href="{{ project.url }}" class="carousel-slide {% if loop.first %}active{% endif %}" title="{{ project.title }}">
+                            <img src="{{ img }}" alt="{{ project.title }}" loading="lazy">
+                        </a>
+                        {% endfor %}
+
+                        {% if project.image | length > 1 %}
+                        <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous image">&#10094;</button>
+                        <button type="button" class="carousel-arrow carousel-next" aria-label="Next image">&#10095;</button>
+                        <div class="carousel-dots">
+                            {% for img in project.image %}
+                            <button type="button" class="carousel-dot {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}" aria-label="Go to image {{ loop.index }}"></button>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+
             <div class="project-info">
                 <h2 class="project-title">{{ project.title }}</h2>
                 <p class="project-description">{{ project.description }}</p>
@@ -28,4 +52,6 @@
         {% endfor %}
     </div>
 </div>
+
+<script src="{{ get_url(path='js/portfolio_carousel.js') }}" defer></script>
 {% endblock custom %}

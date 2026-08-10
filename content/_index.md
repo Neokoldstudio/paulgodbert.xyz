@@ -5,7 +5,7 @@ title = "Home"
 [extra]
 name = "Paul Godbert"
 job = "Research Intern"
-company="Ubisoft LaForge, Montréal"
+#company="Ubisoft LaForge, Montréal"
 
 interests = [
   "Real-time rendering ☀️",

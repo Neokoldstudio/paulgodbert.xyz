@@ -127,6 +127,118 @@
   }
 }
 
+.project-carousel {
+  display: block;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  width: 90%;
+  height: 240px;
+  margin: 0 auto;
+  border-radius: var(--rounded-corner);
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--rounded-corner);
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--rounded-corner);
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide.active:hover img {
+  transform: scale(1.025);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--fg-muted-5);
+  background: var(--fg-muted-2);
+  box-shadow: var(--edge-highlight);
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition), opacity 0.2s ease;
+}
+
+.project-carousel:hover .carousel-arrow {
+  opacity: 1;
+}
+
+.carousel-arrow:hover {
+  background-color: var(--fg-muted-3);
+  color: var(--fg-muted-6, var(--fg-color));
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-prev { left: 0.6rem; }
+.carousel-next { right: 0.6rem; }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--fg-muted-3);
+  box-shadow: var(--edge-highlight);
+  cursor: pointer;
+  transition: var(--transition), transform 0.2s ease;
+}
+
+.carousel-dot:hover {
+  background: var(--fg-muted-4, var(--fg-muted-5));
+  transform: scale(1.15);
+}
+
+.carousel-dot.active {
+  background: var(--fg-color, var(--fg-muted-6));
+  transform: scale(1.25);
+}
+
 /* ===== Responsive ===== */
 
 @media (max-width: 768px) {

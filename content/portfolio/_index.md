@@ -40,9 +40,10 @@ url = "https://johnlivingston.itch.io/hardball"
 tags = ["Unity", "Stylized rendering", "C#", "Game Jam", "3C", "Tooling"]
 
 [[extra.projects]]
-image = "/images/portfolio/keyart_DC.png"
+image = ["/images/portfolio/keyart_DC.png","/images/portfolio/portals.png"]
 title = "Dream Catchers ☁️"
-description = "Coop 3D platformer made for Ubisoft GameLab 2023 - Theme : Dream"
+description = "Online Coop 3D platformer made for Ubisoft GameLab 2023 - Theme : Dream"
 url = ""
 tags = ["Unity", "Stylized rendering", "C#", "Game Jam", "3C", "Tooling"]
+carousel_interval = 4000
 +++
