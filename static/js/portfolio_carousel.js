@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let current = slides.findIndex((s) => s.classList.contains('active'));
         if (current === -1) current = 0;
 
+        let hovering = false;
         let autoplayTimer = null;
         const interval = parseInt(carousel.dataset.autoplay, 10) || 0;
 
@@ -40,13 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         function startAutoplay() {
+            if (hovering || autoplayTimer !== null) return;
             if (interval > 0 && slides.length > 1) {
                 autoplayTimer = setInterval(next, interval);
             }
         }
 
         function stopAutoplay() {
-            if (autoplayTimer) {
+            if (autoplayTimer !== null) {
                 clearInterval(autoplayTimer);
                 autoplayTimer = null;
             }
@@ -57,8 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
             startAutoplay();
         }
 
-        carousel.addEventListener('mouseenter', stopAutoplay);
-        carousel.addEventListener('mouseleave', startAutoplay);
+        carousel.addEventListener('mouseenter', () => {
+            hovering = true;
+            stopAutoplay();
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            hovering = false;
+            startAutoplay();
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) stopAutoplay();
+            else startAutoplay();
+        });
 
         startAutoplay();
     });
