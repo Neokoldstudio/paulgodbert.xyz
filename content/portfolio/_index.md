@@ -5,12 +5,14 @@ description = "A non-exhaustive list of projects I have been appart of 🛠️"
 
 [[extra.projects]]
 image = "https://i.ytimg.com/vi/yiQGPdk1y1U/maxresdefault.jpg"
-title = "Shallow Water Simulator 🌊"
-description = """--TBD--
-1 Year Research Internship at Ubisoft LaForge
-Real-Time Shallow Water Simulator
+title = "Shallow Water Solver + Extensions 🌊"
+description = """
+My master's thesis !
+1 Year research internship at Ubisoft La Forge working on a Real-time Shallow Water solver
+
+⚠️ The thesis is written in french
 """
-url = ""
+url = "/ShallowWaterExtensionToComplexFluidDynamics.pdf"
 tags = ["Real-Time Water Simulation", "C++", "HLSL", "Compute Shaders",  "DX12", "Real-Time Rendering"]
 
 [[extra.projects]]

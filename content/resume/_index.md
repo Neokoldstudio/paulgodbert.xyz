@@ -5,7 +5,7 @@ template = "resume.html"
 [extra]
 subtitle = "Contacs"
 email = "p.godbert@laposte.net"
-phone = "(579) 421-6482)"
+phone = "(579) 421-6482"
 location = "Montreal, QC"
 
 skills = [
